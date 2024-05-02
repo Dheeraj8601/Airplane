@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Show Me Color</title>
+    <style>
+        /* Style the rectangle with the color provided */
+        .rectangle {
+            width: 200px;
+            height: 100px;
+            /* Use inline style to set background color dynamically */
+           /* background-color: #0000;  Default to black */
+        }
+    </style>
+</head>
+<body>
+    <!-- Display the colored rectangle -->
+    <div class="rectangle" id="colored-rectangle"></div>
+
+    <script>
+        // JavaScript to set the background color dynamically
+        var color = "{{ color }}"; // Get the color value
+        var rectangle = document.getElementById("colored-rectangle"); // Get the rectangle element
+        rectangle.style.backgroundColor = color; // Set the background color
+    </script>
+</body>
+</html>
