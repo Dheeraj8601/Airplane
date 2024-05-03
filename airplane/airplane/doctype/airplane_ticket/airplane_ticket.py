@@ -1,6 +1,7 @@
 import frappe
 import random
 import string
+#from frappe.website.website_generator import WebsiteGenerator
 from frappe.model.document import Document
 from frappe import _
 
@@ -17,8 +18,8 @@ class AirplaneTicket(Document):
 
     def set_seat(self):
         if not self.seat:
-            random_number = str(random.randint(10, 99))  # Generate random integer between 10 and 99
-            random_letter = random.choice(string.ascii_uppercase[:5])  # Choose random capital alphabet from A to E
+            random_number = str(random.randint(10, 49))  
+            random_letter = random.choice(string.ascii_uppercase[:3])  
             seat = random_number + random_letter
             self.seat = seat
             frappe.msgprint(_(self.seat))

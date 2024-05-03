@@ -1,0 +1,10 @@
+<div class="card pl-10 pb-0">
+    <div class="card-body rounded">
+        <div class="p-3 alert alert-dark rounded">
+            <h5 class="card-title"><a href="{{ doc.route }}" class="text-decoration-none text-primary fw-bold">{{ doc.airplane }}</a></h5>
+            <h6 class="card-text text-success">{{ doc.source_airport_code }} -> {{ doc.destination_airport_code }}</h6>
+            <p class="card-text text-warning">{{ doc.date_of_departure }} | {{ doc.time_of_departure }} | {{ (doc.duration // 60 )/60}}h </p>
+        </div>
+    </div>
+</div>
+<!-- this is a sample default list template -->

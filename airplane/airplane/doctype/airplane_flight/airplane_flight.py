@@ -1,8 +1,13 @@
 # Copyright (c) 2024, Dheeraj S and contributors
 # For license information, please see license.txt
+from frappe.model.document import Document
 
 import frappe
-from frappe.model.document import Document
+
+
+# from frappe.website.website_generator import WebsiteGenerator
+from frappe.website.website_generator import WebsiteGenerator
+
 
 class AirplaneFlight(Document):
     def validate(self):
