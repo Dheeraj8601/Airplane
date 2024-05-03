@@ -18,14 +18,14 @@
                             <strong>Flight Route:</strong> {{ doc.source_airport_code }} to {{ doc.destination_airport_code }}
                         </li>
                         <li class="list-group-item">
-                            <strong>Departure:</strong> {{ doc.date_of_departure }} | {{ doc.time_of_departure }}
+                            <strong>Departure:</strong> {{ frappe.utils.format_date(doc.date_of_departure, "d MMMM, YYYY")  }} | {{ doc.time_of_departure }}
                         </li>
                         <li class="list-group-item">
                             <strong>Duration:</strong> {{ frappe.utils.format_duration(doc.duration) }}
                         </li>
                     </ul>
                     <div class="text-center mt-4">
-                        <a href="#" class="btn btn-primary">Book Flight</a>
+                        <a href="http://127.0.0.1:8000/air-ticket-web-form/new?flight={{doc.name}}" class="btn btn-primary">Book Flight</a>
                     </div>
                 </div>
             </div>

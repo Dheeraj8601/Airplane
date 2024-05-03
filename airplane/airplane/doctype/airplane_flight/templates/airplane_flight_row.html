@@ -3,7 +3,7 @@
         <div class="p-3 alert alert-dark rounded">
             <h3 class="card-title text-decoration-none text-primary fw-bold">{{ doc.airplane }}</h3>
             <h6 class="card-text text-success">{{ doc.source_airport_code }} -> {{ doc.destination_airport_code }}</h6>
-            <p class="card-text text-danger">{{ doc.date_of_departure }} | {{ doc.time_of_departure }} | {{frappe.utils.format_duration(doc.duration) }}</p>
+            <p class="card-text text-danger">{{ frappe.utils.format_date(doc.date_of_departure, "d MMMM, YYYY")  }} | {{ doc.time_of_departure }} | {{frappe.utils.format_duration(doc.duration) }}</p>
 			<a class="btn btn-primary" href="{{ doc.route }}">View The Flight</a>
         </div>
     </div>
