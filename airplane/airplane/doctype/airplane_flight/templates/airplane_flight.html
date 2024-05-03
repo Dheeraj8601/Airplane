@@ -1,7 +1,35 @@
 {% extends "templates/web.html" %}
 
-{% block page_content %}
-<h1>{{ title }}</h1>
-{% endblock %}
 
-<!-- this is a sample default web page template -->
+{% block page_content %}
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card border border-primary rounded mt-5">
+                <div class="card-header bg-primary text-white">
+                    <h1 class="text-center">{{ title }}</h1>
+                </div>
+                <div class="card-body ">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <strong>Airline:</strong> {{ doc.airplane }}
+                        </li>
+                        <li class="list-group-item">
+                            <strong>Flight Route:</strong> {{ doc.source_airport_code }} to {{ doc.destination_airport_code }}
+                        </li>
+                        <li class="list-group-item">
+                            <strong>Departure:</strong> {{ doc.date_of_departure }} | {{ doc.time_of_departure }}
+                        </li>
+                        <li class="list-group-item">
+                            <strong>Duration:</strong> {{ frappe.utils.format_duration(doc.duration) }}
+                        </li>
+                    </ul>
+                    <div class="text-center mt-4">
+                        <a href="#" class="btn btn-primary">Book Flight</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
