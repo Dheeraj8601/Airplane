@@ -24,7 +24,8 @@
   "duration",
   "is_published",
   "route",
-  "amended_from"
+  "amended_from",
+  "capacity"
  ],
  "fields": [
   {
@@ -133,6 +134,13 @@
    "fieldname": "is_published",
    "fieldtype": "Check",
    "label": "is_published"
+  },
+  {
+   "fetch_from": "airplane.capacity",
+   "fieldname": "capacity",
+   "fieldtype": "Int",
+   "label": "Capacity",
+   "options": "Airplane"
   }
  ],
  "has_web_view": 1,
@@ -145,7 +153,7 @@
    "link_fieldname": "flight"
   }
  ],
- "modified": "2024-05-03 15:13:38.422954",
+ "modified": "2024-05-06 13:52:49.003198",
  "modified_by": "Administrator",
  "module": "Airplane",
  "name": "Airplane Flight",

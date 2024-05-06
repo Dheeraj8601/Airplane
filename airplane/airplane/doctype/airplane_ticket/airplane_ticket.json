@@ -27,7 +27,9 @@
   "flight_price",
   "column_break_dvhdy",
   "total_amount",
-  "amended_from"
+  "amended_from",
+  "airline",
+  "capacity"
  ],
  "fields": [
   {
@@ -147,12 +149,25 @@
   {
    "fieldname": "column_break_dvhdy",
    "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "flight.airplane",
+   "fieldname": "airline",
+   "fieldtype": "Data",
+   "label": "Airline",
+   "options": "Airplane Flight"
+  },
+  {
+   "fetch_from": "flight.capacity",
+   "fieldname": "capacity",
+   "fieldtype": "Int",
+   "label": "Capacity"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-05-03 11:23:41.920759",
+ "modified": "2024-05-06 13:53:19.912145",
  "modified_by": "Administrator",
  "module": "Airplane",
  "name": "Airplane Ticket",

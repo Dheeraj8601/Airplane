@@ -44,15 +44,10 @@ class AirplaneTicket(Document):
         frappe.msgprint('Total amount is {}'.format(self.total_amount))
         
     def check_capacity(self):
-        # Get the capacity of the airplane linked to this ticket
-        airplane_capacity = frappe.get_value("Airplane", self.flight, "capacity")
-
-        # If airplane_capacity is None or empty, set it to 0
-        if not airplane_capacity:
-            airplane_capacity = 0
-
-        # Get the count of tickets for this flight
-        ticket_count = frappe.db.count("Airplane Ticket", {"flight": self.flight, "ticket_status": ["!=", "Cancelled"]})
-
+        airplane_capacity = frappe.db.get_value("Airplane Flight", self.flight, "capacity")
+        ticket_count = frappe.db.count("Airplane Ticket", filters={"airline": self.airline, "ticket_status": ["!=", "Cancelled"]})
+        
         if ticket_count >= airplane_capacity:
-            frappe.throw("Cannot create Airplane Ticket. Capacity of the airplane exceeded.")
+          frappe.throw("Cannot create Airplane Ticket. Capacity of the airplane exceeded. {} {}".format(airplane_capacity, ticket_count))
+
+
