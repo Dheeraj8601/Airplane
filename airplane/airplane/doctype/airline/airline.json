@@ -1,6 +1,5 @@
 {
  "actions": [],
- "allow_guest_to_view": 1,
  "allow_rename": 1,
  "autoname": "prompt",
  "creation": "2024-04-30 10:51:41.424754",
@@ -12,7 +11,7 @@
   "founding_year",
   "customer_care_number",
   "headquarters",
-  "route"
+  "website"
  ],
  "fields": [
   {
@@ -36,12 +35,13 @@
    "reqd": 1
   },
   {
-   "fieldname": "route",
+   "fieldname": "website",
    "fieldtype": "Data",
-   "label": "route"
+   "label": "Website",
+   "options": "URL"
   }
  ],
- "has_web_view": 1,
+ "icon": "link",
  "index_web_pages_for_search": 1,
  "links": [
   {
@@ -49,7 +49,7 @@
    "link_fieldname": "Airline"
   }
  ],
- "modified": "2024-05-02 18:19:18.700656",
+ "modified": "2024-05-06 11:01:01.344672",
  "modified_by": "Administrator",
  "module": "Airplane",
  "name": "Airline",
@@ -70,7 +70,6 @@
    "write": 1
   }
  ],
- "route": "airline",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],

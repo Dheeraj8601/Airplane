@@ -1,7 +1,6 @@
 import frappe
 import random
 import string
-#from frappe.website.website_generator import WebsiteGenerator
 from frappe.model.document import Document
 from frappe import _
 
@@ -13,8 +12,8 @@ class AirplaneTicket(Document):
     def validate(self):
         self.remove_duplicate()
         self.calculate_total_amount()
-        
-        self.set_seat()
+        #self.set_seat()
+        self.check_capacity()
 
     def set_seat(self):
         if not self.seat:
@@ -23,8 +22,6 @@ class AirplaneTicket(Document):
             seat = random_number + random_letter
             self.seat = seat
             frappe.msgprint(_(self.seat))
-
- 
 
     def remove_duplicate(self):
         unique_add_ons = set()
@@ -45,3 +42,17 @@ class AirplaneTicket(Document):
 
         self.total_amount = total_amount
         frappe.msgprint('Total amount is {}'.format(self.total_amount))
+        
+    def check_capacity(self):
+        # Get the capacity of the airplane linked to this ticket
+        airplane_capacity = frappe.get_value("Airplane", self.flight, "capacity")
+
+        # If airplane_capacity is None or empty, set it to 0
+        if not airplane_capacity:
+            airplane_capacity = 0
+
+        # Get the count of tickets for this flight
+        ticket_count = frappe.db.count("Airplane Ticket", {"flight": self.flight, "ticket_status": ["!=", "Cancelled"]})
+
+        if ticket_count >= airplane_capacity:
+            frappe.throw("Cannot create Airplane Ticket. Capacity of the airplane exceeded.")
