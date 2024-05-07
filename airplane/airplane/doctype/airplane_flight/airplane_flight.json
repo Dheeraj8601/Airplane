@@ -25,7 +25,11 @@
   "is_published",
   "route",
   "amended_from",
-  "capacity"
+  "capacity",
+  "crew_members_section",
+  "captain",
+  "co_pilot",
+  "flight_attendant"
  ],
  "fields": [
   {
@@ -141,6 +145,30 @@
    "fieldtype": "Int",
    "label": "Capacity",
    "options": "Airplane"
+  },
+  {
+   "default": "0",
+   "fieldname": "captain",
+   "fieldtype": "Link",
+   "label": "Captain",
+   "options": "Captain"
+  },
+  {
+   "fieldname": "crew_members_section",
+   "fieldtype": "Section Break",
+   "label": "Crew Members"
+  },
+  {
+   "fieldname": "co_pilot",
+   "fieldtype": "Link",
+   "label": "Co pilot",
+   "options": "Co pilot"
+  },
+  {
+   "fieldname": "flight_attendant",
+   "fieldtype": "Link",
+   "label": "Flight Attendant",
+   "options": "Flight Attendant"
   }
  ],
  "has_web_view": 1,
@@ -153,7 +181,7 @@
    "link_fieldname": "flight"
   }
  ],
- "modified": "2024-05-06 13:52:49.003198",
+ "modified": "2024-05-07 11:18:06.288591",
  "modified_by": "Administrator",
  "module": "Airplane",
  "name": "Airplane Flight",

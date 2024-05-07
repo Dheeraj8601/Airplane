@@ -29,7 +29,8 @@
   "total_amount",
   "amended_from",
   "airline",
-  "capacity"
+  "capacity",
+  "gate_number"
  ],
  "fields": [
   {
@@ -162,12 +163,18 @@
    "fieldname": "capacity",
    "fieldtype": "Int",
    "label": "Capacity"
+  },
+  {
+   "fieldname": "gate_number",
+   "fieldtype": "Select",
+   "label": "Gate Number",
+   "options": "A1\nB2\nC3"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-05-06 13:53:19.912145",
+ "modified": "2024-05-07 11:19:46.321732",
  "modified_by": "Administrator",
  "module": "Airplane",
  "name": "Airplane Ticket",

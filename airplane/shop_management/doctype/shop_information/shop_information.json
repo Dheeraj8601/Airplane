@@ -1,0 +1,93 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{shop_number}-{shop_name}-{tenant}-{###}",
+ "creation": "2024-05-07 11:27:43.783671",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "shop_number",
+  "shop_name",
+  "area_in_sq_ft",
+  "tenant",
+  "rent_amount",
+  "date_of_expiry",
+  "availability"
+ ],
+ "fields": [
+  {
+   "fieldname": "shop_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Shop Number",
+   "reqd": 1
+  },
+  {
+   "fieldname": "shop_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Shop Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "area_in_sq_ft",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Area (in sq. ft)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "tenant",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Tenant",
+   "options": "Tenant Information",
+   "reqd": 1
+  },
+  {
+   "fieldname": "rent_amount",
+   "fieldtype": "Currency",
+   "label": "Rent Amount",
+   "reqd": 1
+  },
+  {
+   "fieldname": "date_of_expiry",
+   "fieldtype": "Date",
+   "label": "Date of Expiry",
+   "reqd": 1
+  },
+  {
+   "fieldname": "availability",
+   "fieldtype": "Select",
+   "label": "Availability",
+   "options": "Available\nLeased"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-05-07 11:28:44.818039",
+ "modified_by": "Administrator",
+ "module": "shop management",
+ "name": "Shop Information",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

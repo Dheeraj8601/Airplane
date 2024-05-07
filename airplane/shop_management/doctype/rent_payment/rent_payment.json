@@ -1,0 +1,77 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{shop}-{payment_date}-{###}",
+ "creation": "2024-05-07 11:32:12.107122",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "shop",
+  "payment_date",
+  "amount",
+  "payment_method",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "fieldname": "shop",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Shop",
+   "options": "Shop Information",
+   "reqd": 1
+  },
+  {
+   "fieldname": "payment_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Payment Date",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "shop.rent_amount",
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Amount",
+   "reqd": 1
+  },
+  {
+   "fieldname": "payment_method",
+   "fieldtype": "Data",
+   "label": "Payment Method"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Text",
+   "label": "Remarks"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-05-07 11:32:59.052741",
+ "modified_by": "Administrator",
+ "module": "shop management",
+ "name": "Rent Payment",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
