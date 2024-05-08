@@ -22,6 +22,7 @@
   "time_of_departure",
   "column_break_tai9x",
   "duration",
+  "amount",
   "is_published",
   "route",
   "amended_from",
@@ -169,6 +170,11 @@
    "fieldtype": "Link",
    "label": "Flight Attendant",
    "options": "Flight Attendant"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "label": "Amount"
   }
  ],
  "has_web_view": 1,
@@ -181,7 +187,7 @@
    "link_fieldname": "flight"
   }
  ],
- "modified": "2024-05-07 11:18:06.288591",
+ "modified": "2024-05-08 12:08:54.460391",
  "modified_by": "Administrator",
  "module": "Airplane",
  "name": "Airplane Flight",

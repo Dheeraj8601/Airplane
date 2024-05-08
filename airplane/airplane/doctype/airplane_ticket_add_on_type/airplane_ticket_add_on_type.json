@@ -8,18 +8,24 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "description"
+  "description",
+  "amount"
  ],
  "fields": [
   {
    "fieldname": "description",
    "fieldtype": "Data",
    "label": "Description"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "label": "Amount"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-03 16:00:33.018630",
+ "modified": "2024-05-08 12:11:00.454536",
  "modified_by": "Administrator",
  "module": "Airplane",
  "name": "Airplane Ticket Add-on Type",
