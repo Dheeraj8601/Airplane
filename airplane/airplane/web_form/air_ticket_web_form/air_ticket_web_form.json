@@ -21,7 +21,7 @@
  "list_columns": [],
  "login_required": 0,
  "max_attachment_size": 0,
- "modified": "2024-05-08 12:28:35.640360",
+ "modified": "2024-05-08 15:50:32.836313",
  "modified_by": "Administrator",
  "module": "Airplane",
  "name": "air-ticket-web-form",
@@ -59,19 +59,6 @@
    "options": "Airplane Flight",
    "read_only": 0,
    "reqd": 1,
-   "show_in_filter": 0
-  },
-  {
-   "allow_read_on_all_link_options": 0,
-   "fieldname": "add_ons",
-   "fieldtype": "Table",
-   "hidden": 0,
-   "label": "Add On's",
-   "max_length": 0,
-   "max_value": 0,
-   "options": "Airplane Ticket Add-on Item",
-   "read_only": 0,
-   "reqd": 0,
    "show_in_filter": 0
   }
  ]
